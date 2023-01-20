@@ -17,9 +17,6 @@
       "name": "libapkverify.test"
     },
     {
-      "name": "libcert_request_validator_tests"
-    },
-    {
       "name": "libidsig.test"
     },
     {
@@ -44,9 +41,6 @@
     },
     {
       "name": "libapkverify.test"
-    },
-    {
-      "name": "libcert_request_validator_tests"
     },
     {
       "name": "libidsig.test"
