@@ -42,6 +42,7 @@ rust_library {
     features: [
         "clock",
         "libc",
+        "serde",
         "std",
         "winapi",
     ],
@@ -49,6 +50,7 @@ rust_library {
         "liblibc",
         "libnum_integer",
         "libnum_traits",
+        "libserde",
     ],
     apex_available: [
         "//apex_available:platform",
