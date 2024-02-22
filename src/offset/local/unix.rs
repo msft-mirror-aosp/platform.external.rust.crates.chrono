@@ -77,8 +77,14 @@ const TZDB_LOCATION: &str = "/usr/share/lib/zoneinfo";
 #[cfg(not(any(target_os = "android", target_os = "aix")))]
 const TZDB_LOCATION: &str = "/usr/share/zoneinfo";
 
+// Android patch to avoid iana-time-zone dependency.
+fn get_timezone() -> Result<String, std::io::Error> {
+    let tz_name = std::fs::read_to_string("/etc/timezone")?;
+    Ok(tz_name.trim_end().to_string())
+}
+
 fn fallback_timezone() -> Option<TimeZone> {
-    let tz_name = iana_time_zone::get_timezone().ok()?;
+    let tz_name = get_timezone().ok()?;
     #[cfg(not(target_os = "android"))]
     let bytes = fs::read(format!("{}/{}", TZDB_LOCATION, tz_name)).ok()?;
     #[cfg(target_os = "android")]
