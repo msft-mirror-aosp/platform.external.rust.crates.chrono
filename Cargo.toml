@@ -88,6 +88,8 @@ __internal_bench = []
 alloc = []
 clock = [
     "winapi",
+    "iana-time-zone",
+    "android-tzdata",
     "now",
 ]
 default = [
