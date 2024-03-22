@@ -1,12 +1,17 @@
 {
-  "apex_available": [
-    "//apex_available:platform",
-    "com.android.virt"
-  ],
-  "features": [
-    "std",
-    "clock",
-    "serde"
-  ],
-  "run_cargo": false
+  "apex_available": ["//apex_available:platform", "com.android.virt"],
+  "features": ["now", "serde", "std"],
+  "run_cargo": false,
+  "variants": [
+    {},
+    {
+      "features": ["clock", "now", "serde", "std"],
+      "module_name_overrides": { "libchrono": "libchrono_clock" },
+      "package": {
+        "chrono": {
+          "device_supported": false
+        }
+      }
+    }
+  ]
 }
