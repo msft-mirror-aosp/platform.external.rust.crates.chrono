@@ -57,25 +57,3 @@ rust_library {
     product_available: true,
     vendor_available: true,
 }
-
-rust_library_host {
-    name: "libchrono_clock",
-    crate_name: "chrono",
-    cargo_env_compat: true,
-    cargo_pkg_version: "0.4.34",
-    srcs: ["src/lib.rs"],
-    edition: "2021",
-    features: [
-        "alloc",
-        "clock",
-        "now",
-        "serde",
-        "std",
-        "winapi",
-        "windows-targets",
-    ],
-    rustlibs: [
-        "libnum_traits",
-        "libserde",
-    ],
-}
