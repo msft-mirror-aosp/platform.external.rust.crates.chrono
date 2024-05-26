@@ -39,7 +39,7 @@ rust_test {
     crate_name: "chrono",
     cargo_env_compat: true,
     cargo_pkg_version: "0.4.34",
-    srcs: ["src/lib.rs"],
+    crate_root: "src/lib.rs",
     test_suites: ["general-tests"],
     auto_gen_config: true,
     test_options: {
@@ -67,7 +67,7 @@ rust_test {
     crate_name: "dateutils",
     cargo_env_compat: true,
     cargo_pkg_version: "0.4.34",
-    srcs: ["tests/dateutils.rs"],
+    crate_root: "tests/dateutils.rs",
     test_suites: ["general-tests"],
     auto_gen_config: true,
     test_options: {
@@ -96,7 +96,7 @@ rust_test {
     crate_name: "wasm",
     cargo_env_compat: true,
     cargo_pkg_version: "0.4.34",
-    srcs: ["tests/wasm.rs"],
+    crate_root: "tests/wasm.rs",
     test_suites: ["general-tests"],
     auto_gen_config: true,
     test_options: {
@@ -125,7 +125,7 @@ rust_test {
     crate_name: "win_bindings",
     cargo_env_compat: true,
     cargo_pkg_version: "0.4.34",
-    srcs: ["tests/win_bindings.rs"],
+    crate_root: "tests/win_bindings.rs",
     test_suites: ["general-tests"],
     auto_gen_config: true,
     test_options: {
@@ -154,7 +154,7 @@ rust_library {
     crate_name: "chrono",
     cargo_env_compat: true,
     cargo_pkg_version: "0.4.34",
-    srcs: ["src/lib.rs"],
+    crate_root: "src/lib.rs",
     edition: "2021",
     features: [
         "alloc",
