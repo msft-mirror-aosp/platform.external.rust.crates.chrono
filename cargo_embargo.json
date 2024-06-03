@@ -1,12 +1,6 @@
 {
-  "apex_available": [
-    "//apex_available:platform",
-    "com.android.virt"
-  ],
-  "features": [
-    "std",
-    "clock",
-    "serde"
-  ],
-  "run_cargo": false
+  "apex_available": ["//apex_available:platform", "com.android.virt"],
+  "features": ["now", "serde", "std"],
+  "run_cargo": false,
+  "tests": true
 }
